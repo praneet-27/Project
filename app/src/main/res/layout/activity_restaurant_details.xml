@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RestaurantDetails"
+    android:orientation="vertical"
+    android:background="#000000"
+    android:padding="10dp"
+    android:weightSum="7">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:weightSum="3">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdname"
+                android:textColor="#FFFFFF"
+                android:padding="20dp"
+                android:gravity="left"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratings"
+                android:padding="5dp"
+                android:clickable="false"
+                android:stepSize="0.1"
+                android:isIndicator="true"
+                android:numStars="5"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:src="@drawable/download"
+            android:id="@+id/img"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/rdlat"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/rdlon"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/time"
+        android:textColor="#fff"
+        android:textSize="10dp"
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reviews by customers"
+        android:id="@+id/re"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_weight="5"
+        android:nestedScrollingEnabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/RatingBar"
+        android:layout_below="@id/re"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/reviews"
+        android:orientation="horizontal">
+    </androidx.recyclerview.widget.RecyclerView>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="bottom"
+        android:weightSum="2">
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/call"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button"
+            android:drawableStart="@drawable/ic_baseline_call_24"
+            android:gravity="center"
+            android:text="CALL "
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/img"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button"
+            android:drawableStart="@drawable/ic_baseline_location"
+            android:text="LOCATION"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:id="@+id/direc"/>
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>
+		Tour Paackages
+	</title>
+</head>
+
+<body>
+	<h1>
+		Packages List
+
+	</h1>
+	<h3>
+		<ul>
+			{% for i in id_list %}
+				{% if i is 1 %}
+					<li>
+						<a href="{% url 'tour-package1' %}"> Package 1 - Bangkok </a>
+					</li>
+				{% elif i is 2%}
+					<li>
+						<a href="{% url 'tour-package2' %}"> Package 2 - Goa </a>
+					</li>
+				
+				{% elif i is 3 	%}
+					<li>
+						<a href="{% url 'tour-package3' %}"> Package 3 - Europe </a>
+					</li>
+				{% endif %}
+						{% endfor %}
+		</ul>
+	</h3>			
+</body>
+</html>
